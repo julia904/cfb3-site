@@ -1,0 +1,828 @@
+/* ------------------------------------------------ */
+/* BASE GLOBAL DO SITE                              */
+/* ------------------------------------------------ */
+@media (max-width: 768px) {
+    .hero {
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        max-width: 95%;
+    }
+
+    .hero p {
+        font-size: 18px;
+        max-width: 90%;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: #0F0F0F;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* -------------------------------------------- */
+/* HOME — Versão Profissional Premium           */
+/* -------------------------------------------- */
+
+/* HERO — fundo mais nítido e overlay mais elegante */
+/* ========================================== */
+/* HEADER HOME - PROFISSIONAL E CORRIGIDO     */
+/* ========================================== */
+
+.header-home {
+    width: 100%;
+    height: 140px;                 /* TAMANHO FIXO BONITO */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Logo */
+.logo-grande {
+    width: 150px;
+    margin-bottom: 6px;
+}
+
+/* Menu */
+.header-home nav {
+    display: flex;
+    gap: 26px;
+}
+
+.header-home nav a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.header-home nav a:hover {
+    color: #8B1F2C;
+}
+
+/* =============================== */
+/* HERO — CORRIGIDO PROFISSIONAL  */
+/* =============================== */
+
+.hero {
+    margin-top: 140px; /* distância exata do header */
+    height: 85vh;
+    background: url("fotos/box.png") center/cover no-repeat;
+
+    display: flex;
+    flex-direction: column; /* <-- IMPORTANTE! mantém título + texto + botão empilhados */
+    align-items: flex-start; /* <-- DEIXA O TEXTO À ESQUERDA (profissional) */
+    justify-content: center;
+
+    padding-left: 60px; /* desloca o conteúdo para a esquerda */
+    text-align: left;   /* deixa o texto alinhado */
+    position: relative;
+}
+
+/* HERO SOMENTE DO HOME */
+.home-hero {
+    margin-top: 140px;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.20)
+    );
+}
+
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 58px;
+    font-weight: 800;
+    max-width: 600px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    max-width: 550px;
+}
+
+/* BOTÃO DO HERO */
+.hero .btn {
+    font-size: 20px;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-weight: 700;
+    width: fit-content;
+}
+
+/* -------------------------------------------- */
+/* SEÇÃO DESTAQUES (Coaches, Horários...)       */
+/* -------------------------------------------- */
+/* ------------------------------------------------ */
+/* PÁGINA HORÁRIOS — ELEGANTE E PROFISSIONAL        */
+/* ------------------------------------------------ */
+
+.page-horarios {
+    padding-top: 180px; /* evita o header por cima */
+    max-width: 900px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.page-horarios h1 {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.bloco-dia {
+    background: #111;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid rgba(139,31,44,0.35);
+    margin-bottom: 28px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+
+.bloco-dia h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.bloco-dia ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bloco-dia ul li {
+    font-size: 18px;
+    padding: 6px 0;
+    opacity: 0.9;
+}
+
+.bloco-dia ul li::before {
+    content: "• ";
+    color: #8B1F2C;
+    font-weight: bold;
+}
+
+.home-destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    padding: 70px 40px 90px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.destaque-card {
+    background: #0f0f0fc7;
+    padding: 35px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(139,31,44,0.4);
+    text-align: center;
+
+    transition: 0.28s ease;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.destaque-card:hover {
+    background: #141414;
+    transform: translateY(-6px);
+    border-color: #8B1F2C;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+}
+
+.destaque-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.destaque-card p {
+    font-size: 17px;
+    opacity: 0.85;
+    margin-top: 4px;
+}
+
+
+/* ------------------------------------------------ */
+/* HERO – TELA INICIAL                              */
+/* ------------------------------------------------ */
+
+.hero {
+    height: 85vh;
+    background: url('fotos/box.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 180px;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+        rgba(0,0,0,0.4),
+        rgba(15,15,15,0.95)
+    );
+}
+
+.hero * {
+    position: relative;
+    z-index: 3;
+}
+
+.hero h1 {
+    font-size: 54px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 0 auto 35px;
+    opacity: 0.9;
+}
+
+/* ------------------------------------------------ */
+/* BOTÕES                                           */
+/* ------------------------------------------------ */
+
+.btn {
+    background: #8B1F2C;
+    color: #fff;
+    padding: 14px 26px;
+    border: none;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none !important;
+}
+
+.btn:hover {
+    background: #A22635;
+    transform: scale(1.06);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 2px solid #8B1F2C;
+}
+
+.btn.ghost:hover {
+    background: #8B1F2C22;
+}
+
+/* ------------------------------------------------ */
+/* DESTAQUES DA HOME                                */
+/* ------------------------------------------------ */
+
+.home-destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 60px 40px;
+}
+
+.destaque-card {
+    background: #141414;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(139,31,44,0.35);
+    text-align: center;
+    transition: 0.3s;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+.destaque-card:hover {
+    background: #191919;
+    transform: translateY(-5px);
+    border-color: #8B1F2C;
+}
+
+.destaque-card h3 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.destaque-card p {
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+/* ------------------------------------------------ */
+/* COACHES – SEÇÃO PROFISSIONAL                     */
+/* ------------------------------------------------ */
+.header-interno {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+
+.logo-interna {
+    width: 120px;
+}
+
+.page-section.coaches {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.page {
+    padding-top: 220px; /* antes estava 130 — agora fica uniforme */
+}
+
+.page-section.coaches h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.page-section.coaches p {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.coaches-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.foto {
+    width: 260px;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 4px solid #8B1F2C;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+    transition: 0.3s;
+}
+
+.foto:hover {
+    transform: scale(1.06);
+}
+
+.coach h3 {
+    font-size: 24px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.foto1 { background-image: url("fotos/Ricardo.png"); }
+.foto2 { background-image: url("fotos/Carol.png"); }
+
+/* ------------------------------------------------ */
+/* LINKS DE NAVEGAÇÃO INFERIOR                      */
+/* ------------------------------------------------ */
+
+.page-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-links .btn {
+    margin: 8px;
+}
+
+/* ------------------------------------------------ */
+/* PÁGINA AGENDAR – FORMULÁRIO PROFISSIONAL        */
+/* ------------------------------------------------ */
+
+.page-agendar {
+    padding-top: 260px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-agendar {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.subtitulo-agendar {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.form-agendar {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #6e1722;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+    display: grid;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo label {
+    margin-bottom: 6px;
+}
+
+.campo input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+}
+
+.btn.enviar {
+    margin-top: 10px;
+}
+
+.ou {
+    margin: 18px 0;
+    opacity: 0.7;
+}
+
+.btn.whatsapp {
+    background: #25D366;
+    margin-bottom: 10px;
+}
+
+.btn.whatsapp:hover {
+    background: #1eb956;
+}
+
+/* ------------------------------------------------ */
+/* FOOTER                                           */
+/* ------------------------------------------------ */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #111;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+.footer-link:hover {
+    color: #8B1F2C;
+}
+
+.endereco {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* ----------------------------- */
+/* PLANOS — CARDS PROFISSIONAIS  */
+/* ----------------------------- */
+
+.page-planos {
+    padding-top: 180px; /* distância corrigida do topo */
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.titulo-planos {
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitulo-planos {
+    font-size: 18px;
+    opacity: .85;
+    margin-bottom: 35px;
+}
+
+.cards-planos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD — layout equilibrado */
+.card-plano {
+    background: #111;
+    border: 2px solid #8B1F2C;
+    border-radius: 12px;
+    width: 300px;
+    padding: 28px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: 0.3s;
+
+    /* alinhamento perfeito */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 340px; /* altura perfeita */
+}
+
+/* Título */
+.card-plano h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Descrição */
+.card-plano .descricao {
+    font-size: 17px;
+    opacity: 0.9;
+    margin-bottom: 16px;
+
+    /* deixa sempre na mesma posição */
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Preço — agora destacado */
+.card-plano .preco {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 22px;
+    text-shadow: 0 0 6px rgba(255,255,255,0.15);
+}
+
+/* Hover — premium */
+.card-plano:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.65);
+    border-color: #A22635;
+}
+
+/* Botão */
+.card-plano .btn {
+    margin-top: auto;
+    padding: 14px 0;
+    font-size: 18px;
+}
+
+
+
+.header-home {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* EVITA LOGO GIGANTE NAS PÁGINAS INTERNAS */
+.page-planos .logo-grande {
+    width: 90px;
+}
+
+
+.header-home nav {
+    display: flex;
+    gap: 26px;
+}
+
+.header-home nav a {
+    color: #eee;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header-home nav a:hover {
+    color: #8B1F2C;
+}
+
+/* ========================= */
+/* RESPONSIVIDADE MOBILE     */
+/* ========================= */
+@media (max-width: 768px) {
+
+    /* --- HEADER --- */
+    .header-home {
+        height: 110px;
+        padding-top: 10px;
+    }
+
+    .logo-grande {
+        width: 120px;
+        margin-bottom: 4px;
+    }
+
+    .header-home nav {
+        gap: 18px;
+    }
+
+    .header-home nav a {
+        font-size: 16px;
+    }
+
+    /* --- HERO DO HOME --- */
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: center;
+        text-align: center;
+        height: 75vh;
+        margin-top: 110px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        max-width: 90%;
+    }
+
+    .hero p {
+        font-size: 18px;
+        max-width: 90%;
+    }
+
+    .hero .btn {
+        font-size: 17px;
+        padding: 14px 26px;
+    }
+
+    /* --- DESTAQUES DO HOME --- */
+    .home-destaques {
+        padding: 40px 20px 60px;
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .destaque-card {
+        padding: 25px;
+        font-size: 15px;
+    }
+
+    /* --- COACHES --- */
+    .page-section.coaches {
+        padding-top: 150px;
+    }
+
+    .coaches-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .foto {
+        width: 200px;
+        height: 200px;
+    }
+
+    .coach h3 {
+        font-size: 20px;
+    }
+
+    /* --- HORÁRIOS --- */
+    .horarios-container {
+        padding: 140px 20px 60px;
+        max-width: 100%;
+    }
+
+    .horarios-container h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .bloco-horario {
+        padding: 18px 20px;
+    }
+
+    .bloco-horario h2 {
+        font-size: 22px;
+    }
+
+    .bloco-horario ul li {
+        font-size: 17px;
+    }
+
+    /* --- PLANOS --- */
+    .page-planos {
+        padding-top: 150px;
+    }
+
+    .cards-planos {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .card-plano {
+        width: 90%;
+        margin: auto;
+        height: auto;
+        padding: 25px;
+    }
+
+    .card-plano h2 {
+        font-size: 22px;
+    }
+
+    .card-plano .preco {
+        font-size: 24px;
+    }
+
+    /* --- AGENDAR --- */
+    .page-agendar {
+        padding-top: 180px;
+        margin: auto;
+        width: 90%;
+    }
+
+    .form-agendar {
+        padding: 22px;
+    }
+
+    .campo input {
+        font-size: 15px;
+    }
+}
+
+
+

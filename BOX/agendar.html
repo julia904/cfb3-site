@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Aula Experimental — CFB3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header-home">
+    <a href="index.html">
+        <img src="fotos/cfb3.png" class="logo-grande" alt="CFB3">
+    </a>
+</header>
+
+<main class="page page-agendar">
+
+    <h1 class="titulo-agendar">Agendar Aula Experimental</h1>
+    <p class="subtitulo-agendar">Preencha seus dados ou fale diretamente conosco pelo WhatsApp.</p>
+
+    <form class="form-agendar">
+        <div class="campo">
+            <label>Nome</label>
+            <input type="text" id="nome" placeholder="Seu nome completo">
+        </div>
+
+        <div class="campo">
+            <label>Telefone</label>
+            <input type="tel" id="telefone" placeholder="(xx) 9xxxx-xxxx">
+        </div>
+
+        <div class="campo">
+            <label>Data desejada</label>
+            <input type="date" id="data">
+        </div>
+
+        <button type="button" class="btn enviar" onclick="enviarPedido()">Enviar pedido</button>
+    </form>
+
+    <div class="ou">ou</div>
+
+    <a class="btn whatsapp" href="https://wa.me/14997709326" target="_blank">Falar pelo WhatsApp</a>
+
+    <div class="page-links">
+        <a class="btn ghost" href="index.html">Voltar à Home</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>CFB3 — Fortes juntos.</p>
+    <p><a href="https://www.instagram.com/cfb_3?igsh=bXRwZjF4OXhtZXM2" target="_blank" class="footer-link">Instagram</a></p>
+    <p>Endereço: R. Wilson Pedro Speridião - Jardim Vitoria, Bauru - SP, 17055-812</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
